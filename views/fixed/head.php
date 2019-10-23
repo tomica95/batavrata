@@ -30,6 +30,14 @@
                         <li>
                             <a href="index.php?page=contact">Kontakt</a>
                         </li>
+                        <li>
+                            <?php if(isset($_SESSION['user'])): ?>
+                            <a href="models/auth/logout.php">Logout</a>
+                            <?php endif; ?>
+                            <?php if(!isset($_SESSION['user'])): ?>
+                            <a href="index.php?page=login">Login</a>
+                            <?php endif; ?>
+                        </li>
                     </ul>
                 </nav>
 

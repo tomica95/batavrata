@@ -1,5 +1,7 @@
 <?php 
 
+    session_start();
+
     include "views/fixed/header.php";
 
     include "views/fixed/head.php";
@@ -27,6 +29,10 @@
 
             case 'sobna':
             include "views/pages/sobna.php";
+            break;
+
+            case 'login':
+            include "views/pages/login.php";
 
         }
     }
