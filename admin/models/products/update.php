@@ -10,45 +10,72 @@ if(isset($_SESSION['user'])&&$_SESSION['user']->role_id=="1")
 
         require_once "product_functions.php";
 
-        $prname = $_POST['product-name'];
-        
-        $price = $_POST['price'];
-
-        $code = $_POST['code'];
-
-        $description = $_POST['description'];
-
-        $category_id = $_POST['category_id'];
-
-        $date = date("Y-m-d H:i:s");
-
         $id = $_POST['id'];
 
-        $greske = [];
+        $product_name = $_POST['name'];
 
-        if(empty($prname)){
-            $greske[]="Please insert name of product";
+        $color = $_POST['color'];
+    
+        $width = $_POST['width'];
+    
+        $dimension = $_POST['dimension'];
+    
+        $number_locks = $_POST['number_locks'];
+    
+        $purchasetime = $_POST['purchasetime'];
+    
+        $description = $_POST['description'];
+    
+        $price = $_POST['price'];
+    
+        $category_id = $_POST['category_id'];
+    
+        // $date = date("Y-m-d H:i:s");
+    
+        $greske = [];
+    
+        if(empty($product_name)){
+            $greske[]="Molim Vas unesite naziv proizvoda";
         }
-        if(empty($code)){
-            $greske[]="Please insert code";
+        if(empty($color)){
+            $greske[]="Molim vas unesite boju proizvoda";
         }
-        else if(!is_numeric($code))
+        // else if(!is_numeric($code))
+        // {
+        //     $greske[]="Code must be number";
+        // }
+        if(empty($width)){
+            $greske[]="Molim Vas unesite sirinu plota";
+        }
+        if(empty($dimension)){
+            $greske[]="Molim Vas unesite dimenzije proizvoda";
+        }
+        // else if(!is_numeric($price))
+        // {
+        //     $greske[]="Your price must be number";
+        // }
+        if(empty($number_locks)){
+            $greske[]="Molim Vas unesite broj brava";
+        }
+    
+        if(empty($purchasetime))
         {
-            $greske[]="Code must be number";
+            $greske[]="Molim Vas unesite rok isporuke";
         }
-        if(empty($description)){
-            $greske[]="Please insert description of product";
-        }
-        if(empty($price)){
-            $greske[]="Please insert price of product";
-        }
-        else if(!is_numeric($price))
+    
+        if(empty($description))
         {
-            $greske[]="Your price must be number";
+            $greske[]="Molim Vas unesite opis proizvoda";
         }
+    
+        if(empty($price))
+        {
+            $greske[]="Molim Vas unesite cenu proizvoda";
+        }
+    
         if(!is_numeric($category_id))
         {
-            $greske[]="You must enter the category";
+            $greske[]="Morate uneti kategoriju";
         }
         if(count($greske)>0){
             echo "<ul>";
@@ -63,7 +90,7 @@ if(isset($_SESSION['user'])&&$_SESSION['user']->role_id=="1")
                 if(empty($_FILES['picture']['name']))
                 {
                     
-                    updateProduct($prname,$price,$code,$description,$category_id,$date,$id);
+                    updateProduct($product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id,$id);
                     header('Location:../../index.php?page=products');
                 }
 
@@ -129,7 +156,7 @@ if(isset($_SESSION['user'])&&$_SESSION['user']->role_id=="1")
                     if(move_uploaded_file($tmp_Location, '../../../'.$srcOriginalPicture)){
                         
                         
-                        updateProduct($prname,$price,$code,$description,$category_id,$date,$id);
+                        updateProduct($product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id,$id);
 
                         updatePicture($srcOriginalPicture,$srcNewPicture,$id);                
                          

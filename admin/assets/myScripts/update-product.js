@@ -18,21 +18,41 @@ $(document).ready(function(){
         <form action="models/products/update.php" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group">
-                    <label for="username">Product name</label>
-                    <input type="text" name="product-name"  tabindex="1" class="form-control" placeholder="Product-name" value="${data.product.name}">
+                    <label for="username">Naziv proizvoda</label>
+                    <input type="text" name="name"  tabindex="1" class="form-control" value="${data.product.name}">
                   </div>
                   <div class="form-group">
-                    <label for="username">Code</label>
-                    <input type="text" name="code" tabindex="2" class="form-control" placeholder="Code" value="${data.product.code}">
+                    <label for="username">Boja</label>
+                    <input type="text" name="color" tabindex="2" class="form-control" value="${data.product.color}">
                   </div>
                   <div class="form-group">
-                    <label for="password">Price</label>
-                    <input type="text" name="price" tabindex="2" class="form-control" placeholder="Price" value="${data.product.price}">
+                    <label for="password">Debljina plota</label>
+                    <input type="text" name="width" tabindex="2" class="form-control"  value="${data.product.width}">
                   </div>
                   <div class="form-group">
-                    <label for="confirm-password">Description</label>
-                    <input type="text" name="description"  tabindex="2" class="form-control" placeholder="Description" value="${data.product.description}">
+                    <label for="confirm-password">Dimenzije vrata</label>
+                    <input type="text" name="dimension"  tabindex="2" class="form-control"  value="${data.product.dimension}">
                   </div>
+                  <div class="form-group">
+                    <label for="username">Broj brava</label>
+                    <input type="text" name="number_locks"  tabindex="1" class="form-control" value="${data.product.number_locks}">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username">Rok isporuke</label>
+                    <input type="text" name="purchasetime"  tabindex="1" class="form-control" value="${data.product.purchasetime}">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username">Opis proizvoda</label>
+                    <input type="text" name="description"  tabindex="1" class="form-control" value="${data.product.description}">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username">Cena proizvoda</label>
+                    <input type="text" name="price"  tabindex="1" class="form-control" value="${data.product.price}">
+                  </div>
+
 
                   <input type="hidden" name="id" value="${data.product.productID}">
 

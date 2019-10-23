@@ -8,3 +8,5 @@
 23.10.2019 23:29:08	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
 23.10.2019 23:29:21	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
 24.10.2019 00:00:48	SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+24.10.2019 00:24:59	SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id=NULL' at line 1
+24.10.2019 00:25:12	SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id=NULL' at line 1

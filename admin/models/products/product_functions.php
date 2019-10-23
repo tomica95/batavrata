@@ -119,21 +119,24 @@ function allCategories()
 
 }
 
-function updateProduct($name,$price,$code,$description,$category_id,$date,$id)
+function updateProduct($product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id,$id)
 {
     try
     {
         global $conn;
         
-        $query = $conn->prepare("UPDATE products SET name=:name,code=:code,price=:price,description=:desc,cat_id=:cat_id,date=:date WHERE id=:id");
+        $query = $conn->prepare("UPDATE products SET name=:name,color=:color,width=:width,dimension=:dim,number_locks=:num,purchasetime=:purch,description=:desc,price=:price,cat_id=:cat_id WHERE id=:id");
 
                 $query->execute([
-                    "name"=>$name,
-                    "code"=>$code,
-                    "price"=>$price,
+                    "name"=>$product_name,
+                    "color"=>$color,
+                    "width"=>$width,
+                    "dim"=>$dimension,
+                    "num"=>$number_locks,
+                    "purch"=>$purchasetime,
                     "desc"=>$description,
+                    "price"=>$price,
                     "cat_id"=>$category_id,
-                    "date"=>$date,
                     "id"=>$id
                 ]);
                 
