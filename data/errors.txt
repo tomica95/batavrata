@@ -1,1 +1,9 @@
 23.10.2019 22:08:45	SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+23.10.2019 23:15:27	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:26:00	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:26:34	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:29:06	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:29:08	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:29:08	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:29:08	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'
+23.10.2019 23:29:21	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date' in 'order clause'

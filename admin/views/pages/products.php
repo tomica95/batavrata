@@ -11,12 +11,16 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    <th scope="col">Product name</th>
-                                    <th scope="col">Code of product</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Picture</th>
-                                    <th scope="col">Brand</th>
+                                    <th scope="col">Naziv proizvoda</th>
+                                    <th scope="col">Boja</th>
+                                    <th scope="col">Debljina plota</th>
+                                    <th scope="col">Dimenzija</th>
+                                    <th scope="col">Broj brava</th>
+                                    <th scope="col">Rok isporuke</th>
+                                    <th scope="col">Opis</th>
+                                    <th scope="col">Cena</th>
+                                    <th scope="col">Vrsta proizvoda</th>
+                                    <th scope="col">Slika</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,10 +34,16 @@
                                 <tr>
                                     <th scope="row"><?=$product->productID?></th>
                                     <td><?=$product->productName?></td>
-                                    <td><?=$product->code?></td>
+                                    <td><?=$product->color?></td>
+                                    <td><?=$product->width?></td>
+                                    <td><?=$product->dimension?></td>
+                                    <td><?=$product->number_locks?>
+                                    <td><?=$product->purchasetime?></td>
                                     <td><?=$product->description?></td>
-                                    <td>$ <?=$product->price?></td>
-                                    <td><img src="../<?=$product->small?>" width="50" height="50"></td>
+                                    <td><?=$product->price?></td>
+                                    <td><?=$product->categoryName?></td>
+                                    <!-- dodati na sliku ../ -->
+                                    <td><img src="<?=$product->small?>" width="50" height="50"></td>
                                     <td><?=$product->categoryName?></td>
                                     <td>
                                     <button type="submit" class="btn btn-primary btn-sm update-product" data-id="<?=$product->productID?>">
