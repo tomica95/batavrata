@@ -6,43 +6,70 @@ if(isset($_POST['insert-product'])){
     require_once "product_functions.php";
 
     //working with product
-    $product_name = $_POST['product-name'];
+    $product_name = $_POST['name'];
 
-    $code = $_POST['code'];
+    $color = $_POST['color'];
 
-    $price = $_POST['price'];
+    $width = $_POST['width'];
+
+    $dimension = $_POST['dimension'];
+
+    $number_locks = $_POST['number_locks'];
+
+    $purchasetime = $_POST['purchasetime'];
 
     $description = $_POST['description'];
 
+    $price = $_POST['price'];
+
     $category_id = $_POST['category_id'];
 
-    $date = date("Y-m-d H:i:s");
+    // $date = date("Y-m-d H:i:s");
 
     $greske = [];
 
     if(empty($product_name)){
-        $greske[]="Please insert name of product";
+        $greske[]="Molim Vas unesite naziv proizvoda";
     }
-    if(empty($code)){
-        $greske[]="Please insert code";
+    if(empty($color)){
+        $greske[]="Molim vas unesite boju proizvoda";
     }
-    else if(!is_numeric($code))
+    // else if(!is_numeric($code))
+    // {
+    //     $greske[]="Code must be number";
+    // }
+    if(empty($width)){
+        $greske[]="Molim Vas unesite sirinu plota";
+    }
+    if(empty($dimension)){
+        $greske[]="Molim Vas unesite dimenzije proizvoda";
+    }
+    // else if(!is_numeric($price))
+    // {
+    //     $greske[]="Your price must be number";
+    // }
+    if(empty($number_locks)){
+        $greske[]="Molim Vas unesite broj brava";
+    }
+
+    if(empty($purchasetime))
     {
-        $greske[]="Code must be number";
+        $greske[]="Molim Vas unesite rok isporuke";
     }
-    if(empty($description)){
-        $greske[]="Please insert description of product";
-    }
-    if(empty($price)){
-        $greske[]="Please insert price of product";
-    }
-    else if(!is_numeric($price))
+
+    if(empty($description))
     {
-        $greske[]="Your price must be number";
+        $greske[]="Molim Vas unesite opis proizvoda";
     }
+
+    if(empty($price))
+    {
+        $greske[]="Molim Vas unesite cenu proizvoda";
+    }
+
     if(!is_numeric($category_id))
     {
-        $greske[]="You must enter the category";
+        $greske[]="Morate uneti kategoriju";
     }
     if(count($greske)>0){
         echo "<ul>";
@@ -117,7 +144,7 @@ if(isset($_POST['insert-product'])){
             
 
             try {
-                insertProduct($product_name,$code,$price,$description,$category_id,$date);
+                insertProduct($product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id);
                 $product_id = $conn->lastInsertId();
                 $isInserted = insertPicture($srcOriginalPicture, $srcNewPicture,$product_id);
 

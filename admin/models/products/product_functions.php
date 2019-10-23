@@ -14,16 +14,16 @@ function getAllProductsWithPictureAndCategory()
     
 }
 
-function insertProduct($name,$code,$price,$description,$category_id,$date){
+function insertProduct($product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id){
 
     try
     {
         global $conn;
 
-        $insert = $conn->prepare("INSERT INTO products VALUES('',?,?,?,?,?,?)");
+        $insert = $conn->prepare("INSERT INTO products VALUES('',?,?,?,?,?,?,?,?,?)");
 
         $inserted = $insert->execute([
-            $name,$code,$description,$price,$category_id,$date
+            $product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id
         ]);
     }
     catch(PDOException $e){

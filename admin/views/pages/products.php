@@ -42,8 +42,7 @@
                                     <td><?=$product->description?></td>
                                     <td><?=$product->price?></td>
                                     <td><?=$product->categoryName?></td>
-                                    <!-- dodati na sliku ../ -->
-                                    <td><img src="<?=$product->small?>" width="50" height="50"></td>
+                                    <td><img src="../<?=$product->small?>" width="50" height="50"></td>
                                     <td><?=$product->categoryName?></td>
                                     <td>
                                     <button type="submit" class="btn btn-primary btn-sm update-product" data-id="<?=$product->productID?>">
