@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Users</strong>
+                        <strong class="card-title">Korisnici</strong>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -12,7 +12,7 @@
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Role</th>
+                                    <th scope="col">Uloga</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,13 +27,13 @@
                                     <td><?=$user->name?></td>
                                     <td>
                                     <button type="submit" class="btn btn-primary btn-sm update-user" data-id="<?=$user->id?>">
-                                     <i class="fa fa-dot-circle-o"></i> Update
+                                     <i class="fa fa-dot-circle-o"></i> Izmeni
                                     </button>
                                     </td>
                                     <td>
                                     <form method="POST" action="models/users/delete.php">
                                     <button type="submit" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Delete
+                                    <i class="fa fa-ban"></i> Obrisi
                                     </button>
                                     <input type="hidden" name="id" value="<?=$user->id?>">
                                     </form>

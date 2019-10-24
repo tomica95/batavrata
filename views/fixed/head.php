@@ -22,9 +22,6 @@
 
                         </li>
                         <li>
-                            <a href="index.php?page=lux">Lux sigurnosna</a>
-                        </li>
-                        <li>
                             <a href="index.php?page=sobna">Sobna vrata</a>
                         </li>
                         <li>
@@ -38,6 +35,11 @@
                             <a href="index.php?page=login">Login</a>
                             <?php endif; ?>
                         </li>
+                        <?php if(isset($_SESSION['user'])&&$_SESSION['user']->role_id==1):?>
+                        <li>
+                            <a href="admin/index.php">Admin panel</a>
+                        </li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
 

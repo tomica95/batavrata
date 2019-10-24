@@ -4,14 +4,14 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Users</strong>
+                        <strong class="card-title">Kategorije</strong>
                     </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
-                                    <th scope="col">Name</th>
+                                    <th scope="col">Naziv kategorije</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -26,13 +26,13 @@
                                     
                                     <td>
                                     <button type="submit" data-id="<?=$category->id?>" class="btn btn-primary btn-sm update-category">
-                                     <i class="fa fa-dot-circle-o"></i> Update
+                                     <i class="fa fa-dot-circle-o"></i> Izmeni kategoriju
                                     </button>
                                     </td>
                                     <td>
                                     <form method="POST" action="models/categories/delete.php">
                                     <button type="submit" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Delete
+                                    <i class="fa fa-ban"></i> Obrisi kategoriju
                                     </button>
                                     <input type="hidden" name="id" value="<?=$category->id?>">
                                     </form>

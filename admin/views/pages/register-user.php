@@ -1,6 +1,6 @@
 <div class="col-lg-6">
                                                     <div class="card">
-                                                        <div class="card-header">Register user</div>
+                                                        <div class="card-header">Registruj novog korisnika</div>
                                                         <div class="card-body card-block">
                                                             <form action="models/users/register.php" method="post">
                                                                 <div class="form-group">
@@ -18,14 +18,14 @@
                                                                 <div class="form-group">
                                                                     <div class="input-group">
                                                                         <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                                                                        <input type="password"  name="confirm-password" placeholder="Confirm password" class="form-control">
+                                                                        <input type="password"  name="confirm-password" placeholder="Potvrdi pasvord" class="form-control">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row form-group">
-                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Role of user</label></div>
+                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Uloga korisnika</label></div>
                                                                     <div class="col-12 col-md-9">
                                                                         <select name="id_role" id="select" class="form-control">
-                                                                            <option value="0">Please select</option>
+                                                                            <option value="0">Izaberite ulogu</option>
                                                                             <?php 
                                                                                 require_once "models/users/user_functions.php";
 
@@ -38,7 +38,7 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-actions form-group"><button type="submit" class="btn btn-success btn-sm" name="register">Register new user</button></div>
+                                                                <div class="form-actions form-group"><button type="submit" class="btn btn-success btn-sm" name="register">Registrujte novog korisnika</button></div>
                                                             </form>
                                                            <?php if(isset($_GET['Message'])){
                 echo '<h2>'.$_GET['Message'].'</h2>'; }?>

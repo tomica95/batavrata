@@ -8,7 +8,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Admin panel</h1>
+                    <img src="../images/logo.svg">
                     </div>
                 </div>
             </div>

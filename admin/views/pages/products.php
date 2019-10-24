@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Products</strong>
+                        <strong class="card-title">Proizvodi</strong>
                     </div>
                     <div class="card-body">
                         <table class="table">
