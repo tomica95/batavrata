@@ -2232,6 +2232,39 @@ footer .social-list li a:hover {
     color: #3c7f2b;
 }
 
+.single-proizvod {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.single-proizvod > div {
+    width: 50%;
+}
+
+.single-proizvod img {
+    max-width: 80%;
+}
+
+.single-proizvod-spec {
+    margin-top: 15px;
+}
+
+.single-proizvod-spec li {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.single-proizvod-spec li span {
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 5px;
+}
+
 @media (min-width: 1200px) and (max-width: 1315px) {
     .count-list li:before {
         left: -3px;
@@ -2323,6 +2356,27 @@ footer .social-list li a:hover {
 }
 
 @media (max-width: 767px) {
+
+    .single-proizvod {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+
+    .single-proizvod > div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .single-proizvod img {
+        max-width: 100%;
+    }
+
+    .single-proizvod > div:first-child {
+        margin-bottom: 30px;
+    }
+    
     .search-form {
         margin-left: auto;
         margin-right: auto;

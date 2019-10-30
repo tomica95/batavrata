@@ -2,6 +2,8 @@
 
     session_start();
 
+    require_once "config/connection.php";
+
     include "views/fixed/header.php";
 
     include "views/fixed/head.php";
@@ -33,6 +35,11 @@
 
             case 'login':
             include "views/pages/login.php";
+            break;
+
+            case 'product':
+            include "views/pages/single.php";
+            break;
 
         }
     }

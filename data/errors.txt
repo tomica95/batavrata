@@ -10,3 +10,6 @@
 24.10.2019 00:00:48	SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
 24.10.2019 00:24:59	SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id=NULL' at line 1
 24.10.2019 00:25:12	SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id=NULL' at line 1
+30.10.2019 10:59:11	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'productID' in 'where clause'
+30.10.2019 10:59:19	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'productID' in 'where clause'
+30.10.2019 10:59:24	SQLSTATE[42S22]: Column not found: 1054 Unknown column 'productID' in 'where clause'
