@@ -10,18 +10,18 @@
 
                             $id = $_GET['catid'];
 
-                            $products_sigurnosna = getAllProductsByCategoryId($id);
+                            $products = getAllProductsByCategoryId($id);
                             
-                            foreach($products_sigurnosna as $product_sigurnosna):
+                            foreach($products as $product):
                         ?>
                    <div class="row">
                        <div class="col-sm-4">
-                           <a href="index.php?page=product&id=<?=$product_sigurnosna->productID?>">
-                               <img src="<?=$product_sigurnosna->big?>" alt=""/>
+                           <a href="index.php?page=product&id=<?=$product->productID?>">
+                               <img src="<?=$product->big?>" alt=""/>
 
                            </a>
-                            <p style="text-align:center">		 Naziv:<?=$product_sigurnosna->name?></br>				
-                             Cena: <b style="font-weight:bold;"><?=$product_sigurnosna->price?> rsd</b></p>
+                            <p style="text-align:center">		 Naziv:<?=$product->name?></br>				
+                             Cena: <b style="font-weight:bold;"><?=$product->price?> rsd</b></p>
                        </div>
                        <?php endforeach; ?>
                         

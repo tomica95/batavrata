@@ -21,8 +21,8 @@
             include "views/pages/contact.php";
             break;
 
-            case 'sigurnosna':
-            include "views/pages/sigurnosna.php";
+            case 'doors':
+            include "views/pages/doors.php";
             break;
 
             case 'lux':

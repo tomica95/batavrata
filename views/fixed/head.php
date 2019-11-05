@@ -27,7 +27,7 @@
                         
                         ?>
                         <li>
-                            <a href="index.php?page=sigurnosna&catid=<?=$category->id?>"><?=$category->name?></a>
+                            <a href="index.php?page=doors&catid=<?=$category->id?>"><?=$category->name?></a>
 
                         </li>
                             <?php endforeach;?>
