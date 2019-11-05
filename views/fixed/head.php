@@ -17,13 +17,20 @@
                         <li class="active">
                             <a href="index.php">Početna</a>
                         </li>
+                        <?php 
+
+                            require_once "models/categories/functions.php";
+
+                            $categories = getAllCategories();
+
+                            foreach($categories as $category):
+                        
+                        ?>
                         <li>
-                            <a href="index.php?page=sigurnosna">Sigurnosna vrata</a>
+                            <a href="index.php?page=sigurnosna&catid=<?=$category->id?>"><?=$category->name?></a>
 
                         </li>
-                        <li>
-                            <a href="index.php?page=sobna">Sobna vrata</a>
-                        </li>
+                            <?php endforeach;?>
                         <li>
                             <a href="index.php?page=contact">Kontakt</a>
                         </li>

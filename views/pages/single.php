@@ -36,7 +36,7 @@
                     <span>Opis: </span> <?=$product->description?>
                 </li>
                 <li>
-                    <span>Cena: </span> <?=$product->price?>
+                    <span>Cena: </span> <?=$product->price?> rsd
                 </li>
             </ul>
         </div>

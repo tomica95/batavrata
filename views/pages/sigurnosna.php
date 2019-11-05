@@ -8,7 +8,9 @@
                <?php 
                             require_once "models/products/functions.php";
 
-                            $products_sigurnosna = allProductsFromSigurnosnaVrata();
+                            $id = $_GET['catid'];
+
+                            $products_sigurnosna = getAllProductsByCategoryId($id);
                             
                             foreach($products_sigurnosna as $product_sigurnosna):
                         ?>
