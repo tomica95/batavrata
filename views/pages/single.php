@@ -15,7 +15,7 @@
             <h1>Sigurnosna vrata</h1>
             <ul class="single-proizvod-spec">
                 <li>
-                    <span>Naziv: </span> <?=$product->name?>
+                    <span>Naziv: </span> <?=$product->productName?>
                 </li>
                 <li>
                     <span>Boja: </span> <?=$product->color?>

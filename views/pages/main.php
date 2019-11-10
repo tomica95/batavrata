@@ -73,12 +73,14 @@
                             foreach($products_sigurnosna as $product_sigurnosna):
                         ?>
                    <div class="col-sm-4">
+                   <div class="doors-img">
                             <a class="thumb top__767" href="<?=$product_sigurnosna->big?>" data-fancybox-group="1">
                                 <img src="<?=$product_sigurnosna->big?>" alt=""/>
 
                                 <!-- <span class="thumb_overlay"></span> -->
 
                             </a>
+                            </div>
                                 <p style="text-align:center">						
                                 Cena: <b style="font-weight:bold;"><?=$product_sigurnosna->price ?> rsd</b></p>
                         </div>

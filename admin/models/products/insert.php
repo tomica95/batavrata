@@ -10,7 +10,7 @@ if(isset($_POST['insert-product'])){
 
     $color = $_POST['color'];
 
-    $width = $_POST['width'];
+    $width = $_POST['debljina'];
 
     $dimension = $_POST['dimension'];
 

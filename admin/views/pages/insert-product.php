@@ -30,7 +30,7 @@
 
                   <div class="form-group">
                     <label for="confirm-password">Debljina plota</label>
-                    <input type="text" name="width"  tabindex="2" class="form-control" placeholder="Debljina plota">
+                    <input type="text" name="debljina"  tabindex="2" class="form-control" placeholder="Debljina plota">
                   </div>
 
                   <div class="form-group">
