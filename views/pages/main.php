@@ -6,11 +6,11 @@
                     <div class="camera_caption fadeIn">
                         <div class="container">
                             <div class="captionbg">
-                                <h2>Obezbedite se na vreme!</h2>
+                                <h2>Bata Vrata</h2>
 
-                                <p>Najbolji način da zaštitite sebe i svoju porodicu jeste da ugradite
-                                  sigurnosna protivprovalna vrata. Ova vrata ne samo da će Vas sačuvati od
-                                  provalnika, već će i svojim dizajnom ulepšati ulaz u Vaš dom.</p>
+                                <p>Kod nas je sve za 24 sata,
+                                a može i na nekoliko rata.</br></br></br>
+                                060 55 33 529..</p></br></br></br>
                                 <a class="btn" href="index.php?page=sigurnosna">Pogledajte naš katalog</a>
                             </div>
                         </div>

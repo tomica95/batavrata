@@ -50,7 +50,7 @@
     global $conn;
     try
     {
-        $product = $conn->prepare("SELECT *,p.id AS productID FROM products p JOIN pictures s ON p.id=s.product_id WHERE p.id=?");
+        $product = $conn->prepare("SELECT *,p.id AS productID,p.name as productName FROM products p JOIN pictures s ON p.id=s.product_id WHERE p.id=?");
 
         $product->execute([
             $id
