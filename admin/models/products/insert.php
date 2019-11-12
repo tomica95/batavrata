@@ -10,7 +10,7 @@ if(isset($_POST['insert-product'])){
 
     $color = $_POST['color'];
 
-    $width = $_POST['debljina'];
+    $width_plot = $_POST['debljina'];
 
     $dimension = $_POST['dimension'];
 
@@ -38,7 +38,7 @@ if(isset($_POST['insert-product'])){
     // {
     //     $greske[]="Code must be number";
     // }
-    if(empty($width)){
+    if(empty($width_plot)){
         $greske[]="Molim Vas unesite sirinu plota";
     }
     if(empty($dimension)){
@@ -144,7 +144,7 @@ if(isset($_POST['insert-product'])){
             
 
             try {
-                insertProduct($product_name,$color,$width,$dimension,$number_locks,$purchasetime,$description,$price,$category_id);
+                insertProduct($product_name,$color,$width_plot,$dimension,$number_locks,$purchasetime,$description,$price,$category_id);
                 $product_id = $conn->lastInsertId();
                 $isInserted = insertPicture($srcOriginalPicture, $srcNewPicture,$product_id);
 
