@@ -71,7 +71,7 @@ $(document).ready(function(){
                         </div>
 
                         <div class="input-field">
-                            <input type="submit" value="Update product" name="update-product" class="btn btn-success"/>
+                            <input type="submit" value="Sacuvaj izmene" name="update-product" class="btn btn-success"/>
                         </div> 
 
                         

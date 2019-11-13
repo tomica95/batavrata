@@ -23,7 +23,7 @@ $(document).ready(function(){
                         <label for="nf-email" class=" form-control-label">Category</label><input type="text" id="nf-email" name="category" value="${category.name}" class="form-control"></div>
                         <input type="hidden" value="${category.id}" name="id">
                         <button type="submit" name="update-category" class="btn btn-primary btn-sm">
-                        <i class="fa fa-dot-circle-o"></i> Update
+                        <i class="fa fa-dot-circle-o"></i> Sacuvaj izmene
                     </button>
                     </form>
                 </div>

@@ -45,7 +45,7 @@ $(document).ready(function(){
                                                                     </div>
                                                                 </div>
                                                                 <input type="hidden" value="${data.user.id}" name="id">
-                                                                <div class="form-actions form-group"><button type="submit" class="btn btn-success btn-sm" name="update">Update</button></div>
+                                                                <div class="form-actions form-group"><button type="submit" class="btn btn-success btn-sm" name="update">Sacuvaj izmene</button></div>
                                                             </form>
                                                         </div>
                                                     </div>

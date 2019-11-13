@@ -1,7 +1,7 @@
 <div class="content mt-3">
     <div class="animated fadeIn">
         <div class="row">
-            <div class="col-lg-12" style="font-size:14px;">
+            <div class="col-lg-12" style="font-size:12px;">
                 <div class="card">
                     <div class="card-header">
                         <strong class="card-title">Proizvodi</strong>
@@ -45,11 +45,11 @@
                                     <td><img src="../<?=$product->small?>" width="50" height="50"></td>
                                     <td>
                                     <button type="submit" class="btn btn-primary btn-sm update-product" data-id="<?=$product->productID?>">
-                                     <i class="fa fa-dot-circle-o"></i> Update
+                                     <i class="fa fa-dot-circle-o"></i> Izmeni
                                     </button>
                                     <form method="POST" action="models/products/delete.php">
                                     <button type="submit" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Delete
+                                    <i class="fa fa-ban"></i> Obrisi
                                     </button>
                                     <input type="hidden" name="id" value="<?=$product->productID?>">
                                     </form>
