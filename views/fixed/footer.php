@@ -20,17 +20,17 @@
                 <div class="col-sm-4">
                     <h3>Naša ponuda</h3>
                     <ul class="list">
+                    <?php 
+                    
+                    foreach($categories as $category):
+                    
+                    
+                    ?>
                         <li>
-                            <a href="index.php?page=sigurnosna"> Sigurnosna vrata</a>
-                        </li>
+                            <a href="index.php?page=doors&catid=<?=$category->id?>"><?=$category->name?></a>
 
-                        <li>
-                            <a href="lux-index.php?page=sigurnosna"> Lux sigurnosna vrata</a>
                         </li>
-
-                        <li>
-                            <a href="sobna-vrata.html"> Sobna vrata</a>
-                        </li>
+                    <?php endforeach; ?>
 
 
                     </ul>

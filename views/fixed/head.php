@@ -38,9 +38,6 @@
                             <?php if(isset($_SESSION['user'])): ?>
                             <a href="models/auth/logout.php">Logout</a>
                             <?php endif; ?>
-                            <?php if(!isset($_SESSION['user'])): ?>
-                            <a href="index.php?page=login">Login</a>
-                            <?php endif; ?>
                         </li>
                         <?php if(isset($_SESSION['user'])&&$_SESSION['user']->role_id==1):?>
                         <li>
