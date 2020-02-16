@@ -12,7 +12,7 @@
             <img src="<?=$product->big?>">
         </div>
         <div class="right">
-            <h1>Sigurnosna vrata</h1>
+            <h1></h1>
             <ul class="single-proizvod-spec">
                 <li>
                     <span>Naziv: </span> <?=$product->productName?>
@@ -36,7 +36,7 @@
                     <span>Opis: </span> <?=$product->description?>
                 </li>
                 <li>
-                    <span>Cena: </span> <?=$product->price?> rsd
+                    <span>Cena: </span> <?=$product->price?>
                 </li>
             </ul>
         </div>

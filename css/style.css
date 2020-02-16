@@ -10,14 +10,29 @@ body {
     -webkit-text-size-adjust: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 404px;
-}
+/*img {*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*    max-height: 404px;*/
+/*}*/
 
 .doors-img{
     max-height: 418px;
+}
+
+.captionbg{
+
+    max-height: 300px;
+}
+
+.doors-img img{
+    max-height: 305px !important;
+    min-height: 316px !important;
+}
+
+.brand_name img {
+    max-width: 100%;
+    height: auto;
 }
 
 .col-sm-4{
@@ -25,6 +40,13 @@ img {
 }
 .doors-text{
     margin-top:15px;
+}
+
+
+
+.doors-img a{
+
+    max-height: 333px !important;
 }
 
 h1,

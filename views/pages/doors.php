@@ -26,7 +26,7 @@
                             </div>
                             <div class="doors-text">
                             <p style="text-align:center">		 Naziv:<?=$product->productName?></br>				
-                             Cena: <b style="font-weight:bold;"><?=$product->price?> rsd</b>
+                             Cena: <b style="font-weight:bold;"><?=$product->price?></b>
                             </div>
                        </div>
                   
