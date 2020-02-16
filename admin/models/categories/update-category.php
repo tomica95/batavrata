@@ -11,12 +11,16 @@ if(isset($_POST['id']))
     $id = $_POST['id'];
 
     $category = findCategory($id);
+    $allCategories = getAllCategories();
 
-    echo json_encode($category);
+    $data['category'] = $category;
+    $data['allCategories'] = $allCategories;
+
+    echo json_encode($data);
 }
 else {
 
-    http_response_code(400); 
+    http_response_code(400);
     echo json_encode(["error"=> "You haven't sent id"]);
 }
 
