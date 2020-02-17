@@ -60,17 +60,18 @@ function findCategory($id)
     }
 }
 
-function updateCategory($id,$name)
+function updateCategory($id,$name,$parent_id)
 {
     global $conn;
 
     try
     {
-        $update = $conn->prepare("UPDATE categories SET name=:name WHERE id=:id");
+        $update = $conn->prepare("UPDATE categories SET name=:name,parent_id=:parent WHERE id=:id");
 
         $update->execute([
             "name"=>$name,
-            "id"=>$id
+            "id"=>$id,
+            "parent"=>$parent_id
         ]);
     }
     catch(PDOException $e){

@@ -14,6 +14,7 @@ $(document).ready(function(){
             success:function(data)
             {
                 console.log(data);
+
                 let html = `<div class="card">
                 <div class="card-header">
                     <strong>Upate category : ${data.category.name}</strong>
@@ -22,31 +23,31 @@ $(document).ready(function(){
                     <form action="models/categories/update.php" method="post" class="">
                         <div class="form-group">
                         <label for="nf-email" class=" form-control-label">Naziv kategorije</label><input type="text" id="nf-email" name="category" value="${data.category.name}" class="form-control"></div>
-                        <label for="nf-email" class=" form-control-label">Naziv parent kategorije</label>
+                        <label for="" class=" form-control-label">Naziv parent kategorije</label>
                             <select name="parent_id">
                             `;
-                html += `<option value="">Nema nadkategoriju</option>`;
+
+                html+= `<option value="">Nema nadkategoriju</option>`;
 
                 var isChecked;
                 for(let category of data['allCategories'])
                 {
                         isChecked = category.id == data.category.parent_id ? "selected" : " ";
-                    console.log(isChecked);
                         html += `<option value="${category.id}" ${isChecked}>${category.name} </option>`;
                 }
 
                 html+=`
                             </select>
-                        </div>
-                        <input type="hidden" value="${data['category'].id}" name="id">
+                        
+                        <input type="hidden" value="${data.category.id}" name="id">
                         <button type="submit" name="update-category" class="btn btn-primary btn-sm">
                         <i class="fa fa-dot-circle-o"></i> Sacuvaj izmene
-                    </button>
+                        </button>
                     </form>
+                    </div>
                 </div>
                
-            </div>`;
-
+                     `;
                 $('#category-update').html(html);
             },
             error:function(error){

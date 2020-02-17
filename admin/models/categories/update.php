@@ -6,6 +6,8 @@
 
         $name = $_POST['category'];
 
+        $parent_id = $_POST['parent_id'];
+
         $greske = [];
 
         if(empty($name))
@@ -30,7 +32,7 @@
             require_once "category_functions.php";
 
             
-            updateCategory($id,$name);
+            updateCategory($id,$name,$parent_id);
 
             header("Location:../../index.php?page=categories");
         }
