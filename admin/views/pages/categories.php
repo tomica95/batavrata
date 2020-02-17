@@ -12,6 +12,7 @@
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Naziv kategorije</th>
+                                    <th scope="col">Naziv nadkategorije</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -23,6 +24,7 @@
                                 <tr>
                                     <th scope="row"><?=$category->id?></th>
                                     <td><?=$category->name?></td>
+                                    <td><?=$category->nadkategorija ?: "/"?></td>
                                     
                                     <td>
                                     <button type="submit" data-id="<?=$category->id?>" class="btn btn-primary btn-sm update-category">

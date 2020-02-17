@@ -32,7 +32,12 @@ $(document).ready(function(){
                 var isChecked;
                 for(let category of data['allCategories'])
                 {
+                        if(category.id==id)
+                        {
+                            continue;
+                        }
                         isChecked = category.id == data.category.parent_id ? "selected" : " ";
+                        
                         html += `<option value="${category.id}" ${isChecked}>${category.name} </option>`;
                 }
 

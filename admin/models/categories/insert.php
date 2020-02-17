@@ -9,6 +9,8 @@
         if(isset($_POST['insert-category']))
         {
             $name = $_POST['category'];
+            $parent_id = $_POST['parent_id'];
+
             $greske = [];
 
             if(empty($name)){
@@ -23,7 +25,7 @@
             }
             else
             {
-                insertCategory($name);
+                insertCategory($name, $parent_id);
 
                 header("Location:../../index.php?page=categories");
             }

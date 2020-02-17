@@ -1,7 +1,7 @@
 <?php 
 function getAllCategories()
 {
-    return executeQuery("SELECT * FROM categories");
+    return executeQuery("SELECT k.id as id,k.name as name,c.name as nadkategorija FROM `categories` c RIGHT OUTER JOIN `categories` k ON c.id=k.parent_id");
 }
 
 function deleteCategory($id)
@@ -19,16 +19,17 @@ function deleteCategory($id)
         }
 }
 
-function insertCategory($name)
+function insertCategory($name, $parent_id)
 {
         try
         {
             global $conn;
             
-            $query = $conn->prepare("INSERT INTO categories VALUES ('',?)");
+            $query = $conn->prepare("INSERT INTO categories VALUES ('',?,?)");
 
             $query->execute([
-                $name
+                $name,
+                $parent_id
             ]);
     
         }
