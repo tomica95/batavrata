@@ -3,14 +3,23 @@
         <!-- Header-->
         <!-- /header -->
         <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                    <img src="../images/logo.svg">
+                    <div class="page-admin-logo">
+                        <img src="../images/logo.svg">
                     </div>
-                </div>
-            </div>
            
         </div>
+
+
+<style>
+    .page-admin-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 500px;
+    }
+
+    .page-admin-logo img {
+        width: 100%;
+        height: auto;
+    }
+</style>

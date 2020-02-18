@@ -19,7 +19,7 @@
             $_SESSION['user'] = $user;
             $id_user = $_SESSION['user']->id;
             userLogged($id_user);
-            header('Location:../../index.php');
+            header('Location:../../admin/index.php');
         }
         else
         {

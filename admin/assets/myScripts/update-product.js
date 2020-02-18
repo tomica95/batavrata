@@ -4,6 +4,8 @@ $(document).ready(function(){
     
         let id= $(this).data('id');
 
+
+
         $.ajax({
             url:"models/products/update-product.php",
             method:"POST",
@@ -69,7 +71,7 @@ $(document).ready(function(){
 
                           <input type="file" name="picture" id="productPicture" style="display:none;" onchange="document.getElementById('productPictureValue').innerHTML=this.value;"/>
                         </div>
-
+                        </br><hr>
                         <div class="input-field">
                             <input type="submit" value="Sacuvaj izmene" name="update-product" class="btn btn-success"/>
                         </div> 
@@ -77,7 +79,7 @@ $(document).ready(function(){
                         
                       </form>`;
 
-                      $('#product-update').html(html);
+                      $('.edit-product').html(html);
 
 
             },

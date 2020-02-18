@@ -1,4 +1,24 @@
 <div class="content mt-3">
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Izmeni proizvod</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body edit-product">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="animated fadeIn">
         <div class="row">
             <div class="col-lg-12" style="font-size:12px;">
@@ -42,11 +62,12 @@
                                     <td><?=$product->description?></td>
                                     <td><?=$product->price?></td>
                                     <td><?=$product->categoryName?></td>
-                                    <td><img src="../<?=$product->small?>" width="50" height="50"></td>
+                                    <td><img src="../<?=$product->small?>"></td>
                                     <td>
-                                    <button type="submit" class="btn btn-primary btn-sm update-product" data-id="<?=$product->productID?>">
-                                     <i class="fa fa-dot-circle-o"></i> Izmeni
-                                    </button>
+
+                                        <button type="button" class="btn btn-primary btn-sm update-product" data-toggle="modal" data-id="<?=$product->productID?>" data-target="#exampleModalLong">
+                                            Izmeni
+                                        </button>
                                     <form method="POST" action="models/products/delete.php">
                                     <button type="submit" class="btn btn-danger btn-sm">
                                     <i class="fa fa-ban"></i> Obrisi
