@@ -21,7 +21,7 @@
                     <h3>Naša ponuda</h3>
                     <ul class="list">
                     <?php 
-                    
+                    $categories = getAllCategories();
                     foreach($categories as $category):
                     
                     
