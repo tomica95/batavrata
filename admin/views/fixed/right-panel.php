@@ -3,11 +3,14 @@
         <!-- Header-->
         <!-- /header -->
         <!-- Header-->
+    <?php if (!isset($_GET['page']) || empty($_GET['page'])): ?>
                     <div class="page-admin-logo">
                         <img src="../images/logo.svg">
                     </div>
            
         </div>
+
+    <?php endif; ?>
 
 
 <style>

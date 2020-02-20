@@ -34,6 +34,10 @@
             break;
 
             case 'login':
+                if (isset($_SESSION['user'])) {
+                    header("Location:index.php");
+                    exit;
+                }
             include "views/pages/login.php";
             break;
 

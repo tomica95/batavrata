@@ -63,7 +63,8 @@
         }
         else
         {
-                echo "You don't have permission to be here!";
+                header("Location:../index.php");
+                exit;
         }
 
         
