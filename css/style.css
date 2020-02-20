@@ -16,15 +16,19 @@ body {
 /*    max-height: 404px;*/
 /*}*/
 
-.doors-img{
+.doors-by-category h1{
+    text-align: center;
+}
+
+.doors-img {
     max-height: 418px;
 }
-.captionbg{
+.captionbg {
 
     max-height: 300px;
 }
 
-.doors-img img{
+.doors-img img {
     max-height: 305px !important;
     min-height: 316px !important;
 }
