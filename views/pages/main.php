@@ -54,13 +54,13 @@
     </section>
     <section class="well">
         <div class="container">
-            <h3>Izdvajamo iz ponude</h3>
+            <h3>Celokupna ponuda</h3>
 
             <div class="resp-tabs" style="text-align: center;" id="tab-">
-                <ul class="resp-tabs-list">
+                <!-- <ul class="resp-tabs-list">
                     <li>Sigurnosna Vrata</li>
                
-                </ul>
+                </ul> -->
                 <div class="resp-tabs-container">
 
                     <div>
@@ -68,9 +68,9 @@
                        <?php 
                             require_once "models/products/functions.php";
 
-                            $products_sigurnosna = allProductsFromSigurnosnaVrata();
+                            $products = getAllProductsWithPictureAndCategory();
                             
-                            foreach($products_sigurnosna as $product_sigurnosna):
+                            foreach($products as $product_sigurnosna):
                         ?>
                    <div class="col-sm-4">
                    <div class="doors-img">
