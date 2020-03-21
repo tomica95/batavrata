@@ -8,9 +8,9 @@ if(isset($_SESSION['user'])&&$_SESSION['user']->role_id=="1")
         $email = $_REQUEST['email'];
         $regMail = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/";
         $password = $_REQUEST['password'];
-        $regPassword = "/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{5,}/";
+        $regPassword = "/[A-Z][a-z]{2,10}/";
         $conf_password = $_REQUEST['confirm-password'];
-        $regPassword2 = "/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{5,}/";
+        $regPassword2 = "/[A-Z][a-z]{2,10}/";
         $role_id = $_REQUEST['id_role'];
         $greske = [];
         if(!preg_match($regMail,$email)){
