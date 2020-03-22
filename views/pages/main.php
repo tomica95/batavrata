@@ -68,24 +68,32 @@
                        <?php 
                             require_once "models/products/functions.php";
 
-                            $products = getAllProductsWithPictureAndCategory();
-                            
-                            foreach($products as $product_sigurnosna):
+                            $categories = getAllCategoriesWithChildren();
+
+
+                            $categoriesAll = [];
+                           foreach ($categories as $category)
+                           {
+                               $categoriesAll[$category->name] = getAllProductsByCategoryId($category->id);
+                           }
+                       foreach($categoriesAll as $category => $products):
+                       echo '<div class="row doors-by-category">';
+                       echo "</br>";
+                       foreach ($products as $product):
                         ?>
                    <div class="col-sm-4">
                    <div class="doors-img">
-                            <a class="thumb top__767" href="<?=$product_sigurnosna->big?>" data-fancybox-group="1">
-                                <img src="<?=$product_sigurnosna->big?>" alt=""/>
+                            <a class="thumb top__767" href="<?=$product->big?>" data-fancybox-group="1">
+                                <img src="<?=$product->big?>" alt=""/>
 
                                 <!-- <span class="thumb_overlay"></span> -->
 
                             </a>
                             </div>
                                 <p style="text-align:center">						
-                                Cena: <b style="font-weight:bold;"><?=$product_sigurnosna->price ?> rsd</b></p>
+                                Cena: <b style="font-weight:bold;"><?=$product->price ?> rsd</b></p>
                         </div>
-                            <?php endforeach; ?>
-
+                           <?php endforeach; echo '</div>'; endforeach;?>
                     
                </div>
                            

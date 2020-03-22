@@ -18,19 +18,13 @@ body {
 
 .doors-by-category h1{
     text-align: center;
+    margin-top: 75px;
+    margin-bottom: 25px;
 }
 
-.doors-img {
-    max-height: 418px;
-}
 .captionbg {
 
     max-height: 300px;
-}
-
-.doors-img img {
-    max-height: 305px !important;
-    min-height: 316px !important;
 }
 
 .brand_name img {
@@ -43,13 +37,6 @@ body {
 }
 .doors-text{
     margin-top:15px;
-}
-
-
-
-.doors-img a{
-
-    max-height: 333px !important;
 }
 
 h1,
@@ -174,11 +161,12 @@ strong {
     overflow: hidden;
     border: 9px solid #f8f8f8;
     outline: 1px solid #e4e4e4;
+    text-align: center;
 }
 
 .thumb img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 350px;
     -moz-transition: 0.5s all ease;
     -o-transition: 0.5s all ease;
     -webkit-transition: 0.5s all ease;
