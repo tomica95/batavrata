@@ -11,7 +11,7 @@
     }
     function getAllCategoriesWithChildren(){
         try{
-            return executeQuery("SELECT * FROM categories");
+                return executeQuery("SELECT * FROM categories");
         }
         catch(PDOException $e){
 

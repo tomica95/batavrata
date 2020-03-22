@@ -70,7 +70,6 @@
 
                             $categories = getAllCategoriesWithChildren();
 
-
                             $categoriesAll = [];
                            foreach ($categories as $category)
                            {
@@ -78,20 +77,25 @@
                            }
                        foreach($categoriesAll as $category => $products):
                        echo '<div class="row doors-by-category">';
-                       echo "</br>";
+                       if($category=="Sigurnosna vrata"):
+                       echo "<h1>".$category."</h1>";
+                       elseif($category=="Sobna vrata"):
+                       echo "<h1>".$category."</h1>";
+                       endif;
                        foreach ($products as $product):
                         ?>
                    <div class="col-sm-4">
                    <div class="doors-img">
-                            <a class="thumb top__767" href="<?=$product->big?>" data-fancybox-group="1">
-                                <img src="<?=$product->big?>" alt=""/>
+                            <a class="thumb top__767" href="index.php?page=product&id=<?=$product->productID?>">
+                                <img src="<?=$product->big?>" alt="<?=$product->name?>"/>
 
                                 <!-- <span class="thumb_overlay"></span> -->
 
                             </a>
                             </div>
-                                <p style="text-align:center">						
+                                <p style="text-align:center">
                                 Cena: <b style="font-weight:bold;"><?=$product->price ?> rsd</b></p>
+                       <a href="index.php?page=product&id=<?=$product->productID?>"><button class="dugme">Pogledajte više...</button></a>
                         </div>
                            <?php endforeach; echo '</div>'; endforeach;?>
                     

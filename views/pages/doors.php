@@ -44,7 +44,10 @@
                             </div>
                             <div class="doors-text">
                                 <p style="text-align:center"> Naziv:<?=$product->productName?></br>
-                                Cena: <b style="font-weight:bold;"><?=$product->price?></b></p>
+                                Cena: <b style="font-weight:bold;"><?=$product->price?></b>
+                                    <a href="index.php?page=product&id=<?=$product->productID?>"><button class="dugme">Pogledajte više...</button></a>
+                                </p>
+
                             </div>
                    </div>
 
@@ -65,7 +68,9 @@
                                </div>
                                <div class="doors-text">
                                    <p style="text-align:center"> Naziv:<?=$product->productName?></br>
-                                   Cena: <b style="font-weight:bold;"><?=$product->price?></b></p>
+                                   Cena: <b style="font-weight:bold;"><?=$product->price?></b>
+                                   </br><a href="index.php?page=product&id=<?=$product->productID?>"><button class="dugme">Pogledajte više...</button></a>
+                                   </p>
                                </div>
                            </div>
                            <?php endforeach; endif;?>
