@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     require_once "models/products/functions.php";
 
     $id = $_GET['catid'];
@@ -69,7 +69,7 @@
                                <div class="doors-text">
                                    <p style="text-align:center"> Naziv:<?=$product->productName?></br>
                                    Cena: <b style="font-weight:bold;"><?=$product->price?></b>
-                                   </br><a href="index.php?page=product&id=<?=$product->productID?>"><button class="dugme">Pogledajte više...</button></a>
+                                   </br></br><a href="index.php?page=product&id=<?=$product->productID?>"><button class="dugme">Pogledajte više...</button></a>
                                    </p>
                                </div>
                            </div>

@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['insert-product'])){
-    
+
     require_once "../../../config/connection.php";
     require_once "product_functions.php";
 
@@ -80,15 +80,15 @@ if(isset($_POST['insert-product'])){
     }
     else
     {
-  
+
     // working with picture
     $file_name = $_FILES['picture']['name'];
     $tmp_Location = $_FILES['picture']['tmp_name'];
     $file_type = $_FILES['picture']['type'];
     $file_size = $_FILES['picture']['size'];
-    
 
- 
+
+
     $errors = [];
 
     $alow_types = ['image/jpg', 'image/jpeg', 'image/png'];
@@ -100,14 +100,14 @@ if(isset($_POST['insert-product'])){
         array_push($errors, "To heavy");
     }
 
-    
+
     if(count($errors) == 0){
-       
 
-        list($width, $height) = getimagesize($tmp_Location);
 
-       
-        
+        // list($width, $height) = getimagesize($tmp_Location);
+
+
+
         $permanent_picture = null;
         switch($file_type){
             case 'image/jpeg':
@@ -118,30 +118,30 @@ if(isset($_POST['insert-product'])){
                 break;
         }
 
-        $newWidth = 320;
-        $newHeight = ($newWidth/$width) * $height; 
-        $newPicture = imagecreatetruecolor($newWidth, $newHeight);
-        
-    
-        imagecopyresampled($newPicture, $permanent_picture, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+        // $newWidth = 320;
+        // $newHeight = ($newWidth/$width) * $height;
+        // $newPicture = imagecreatetruecolor($newWidth, $newHeight);
 
-        
+
+        // imagecopyresampled($newPicture, $permanent_picture, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+
         $name = time().$file_name;
         $srcNewPicture = 'assets/img/small/'.$name;
 
-        switch($file_type){
-            case 'image/jpeg':
-                imagejpeg($newPicture,'../../../'.$srcNewPicture, 75);
-                break;
-            case 'image/png':
-                imagepng($newPicture,'../../../'.$srcNewPicture);
-                break;
-        }
+        // switch($file_type){
+        //     case 'image/jpeg':
+        //         imagejpeg($newPicture,'../../../'.$srcNewPicture, 75);
+        //         break;
+        //     case 'image/png':
+        //         imagepng($newPicture,'../../../'.$srcNewPicture);
+        //         break;
+        // }
 
         $srcOriginalPicture = 'assets/img/'.$name;
 
         if(move_uploaded_file($tmp_Location, '../../../'.$srcOriginalPicture)){
-            
+
 
             try {
                 insertProduct($product_name,$color,$width_plot,$dimension,$number_locks,$purchasetime,$description,$price,$category_id);
@@ -149,20 +149,20 @@ if(isset($_POST['insert-product'])){
                 $isInserted = insertPicture($srcOriginalPicture, $srcNewPicture,$product_id);
 
                 if($isInserted){
-                    
+
                     header("Location:../../index.php?page=products");
                 }
-                
+
             } catch(PDOException $e){
 
                 writeError($e->getMessage());
-               
+
             }
         }
 
-       
+
         imagedestroy($permanent_picture);
-        imagedestroy($newPicture);
+
 
     } else {
         echo "<ul>";

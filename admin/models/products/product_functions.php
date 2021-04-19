@@ -71,6 +71,8 @@ function deletePictureofProduct($id)
     try{
         global $conn;
 
+
+
         $delete = $conn->prepare("DELETE FROM pictures WHERE product_id=?");
 
         $delete->execute([

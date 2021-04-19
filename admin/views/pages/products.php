@@ -62,7 +62,7 @@
                                     <td><?=$product->description?></td>
                                     <td><?=$product->price?></td>
                                     <td><?=$product->categoryName?></td>
-                                    <td><img src="../<?=$product->small?>"></td>
+                                    <td><img src="../<?=$product->big?>"></td>
                                     <td>
 
                                         <button type="button" class="btn btn-primary btn-sm update-product" data-toggle="modal" data-id="<?=$product->productID?>" data-target="#exampleModalLong">

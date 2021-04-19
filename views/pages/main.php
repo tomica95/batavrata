@@ -1,4 +1,4 @@
-<main>
+﻿<main>
     <section>
         <div class="camera_container">
             <div id="camera" class="camera_wrap">
@@ -8,9 +8,9 @@
                             <div class="captionbg">
                                 <h2>Bata Vrata</h2>
 
-                                <p>Kod nas je sve za 24 sata,
-                                a može i na nekoliko rata.</br></br></br>
-                                060 55 33 529..</p></br></br></br>
+                                <p><h4>Kod nas je sve za 24 sata,
+                                a može i na nekoliko rata.</h4></p>
+                                <h3><a href="tel:060/55-33-529">060/55-33-529</a></h3></br>
                                 <a class="btn" href="index.php?page=sigurnosna">Pogledajte naš katalog</a>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
 
                             </a>
                             </div>
-                                <p style="text-align:center">
+                                <p style="text-align:center"> Naziv:<?=$product->productName?></br>
                                 Cena: <b style="font-weight:bold;"><?=$product->price ?> rsd</b></p>
                        <a href="index.php?page=product&id=<?=$product->productID?>"><button class="dugme">Pogledajte više...</button></a>
                         </div>

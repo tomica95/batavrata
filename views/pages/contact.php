@@ -1,13 +1,13 @@
-<main>
+﻿<main>
        <section class="well">
            <div class="container" style="max-width: 900px;">
                <h3>Kontakt informacije</h3>
 
 
 
-                       <h5>Ustanička 3,<br> 11200 Beograd</h5>
+                       <h4>Ustanička 3,<br> 11200 Beograd</h4>
                        <dl>
-                           <dt>Telefon:     <a href="callto:+381 64 2030011">+381 60 5533529</a></dt> <br/>
+                           <h4><dt>Telefon:     <a href="callto:+381 64 2030011">+381 60 5533529</a></dt></h4> <br/>
                            <dt>E-mail:</dt>
                            <dd class="link_mod_1 link_mod">
                                &nbsp; <a href="/cdn-cgi/l/email-protection#eac9">

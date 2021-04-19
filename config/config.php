@@ -1,6 +1,6 @@
 <?php
 
-define("BASE_URL", $_SERVER['DOCUMENT_ROOT'].'/batavrata/');
+define("BASE_URL", $_SERVER['DOCUMENT_ROOT']."/test/");
 
 define("SERVER", env("SERVER"));
 define("DATABASE", env("DATABASE"));

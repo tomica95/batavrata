@@ -1,4 +1,4 @@
-
+﻿
     <!--========================================================
                               FOOTER
     =========================================================-->
@@ -84,6 +84,7 @@
                         Bata Vrata © <span id="copyright-year"></span><br/> Sva prava zadržana.
                         <!-- {%FOOTER_LINK} -->
                     </div>
+		<a href="index.php?page=login">...</a>
                 </div>
             </div>
         </div>
