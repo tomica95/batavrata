@@ -9,7 +9,7 @@
 ?>
 <div class="single-proizvod">
         <div class="left">
-            <img src="<?=$product->big?>">
+            <a href="<?=$product->big?>" ><img src="<?=$product->big?>"/></a>
         </div>
         <div class="right">
             <h1></h1>
